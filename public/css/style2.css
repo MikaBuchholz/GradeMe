@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+
+
+
+.input-field {
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    border-width: 0.1rem;
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;
+}
+
+
+.basic-grid {
+    margin-top: 3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: repeat(5, 0.2fr);
+    justify-content:center;
+}
+
+.LK-tickbox {
+    background-color: lightcoral;
+    -webkit-tap-highlight-color: none;
+    cursor: pointer;
+}
+
+.submit-button {
+    border-style: solid;
+    border: none;
+    outline: none;
+    font-family: 'Catamaran', sans-serif;
+    cursor: pointer;
+    background-color:black;
+    color:azure;
+}
+
+
+.submit-button:hover {
+    background-color:coral;
+}
+
+
+.refresh-button {
+    border-style: solid;
+    border: none;
+    outline: none;
+    font-family: 'Catamaran', sans-serif;
+    cursor: pointer;
+    background-color:black;
+    color:azure;   
+}
+
+.refresh-button:hover {
+    background-color:coral;
+}
+
+
+.refresh-button-div {
+    display: flex;
+    justify-content: center;
+    margin-left: 97%;
+    width: 3%;
+}
+
+
+.first-container {
+    display: flex;
+    justify-content: center;
+}
+
+.second-container {
+    display: flex;
+    justify-content: center;
+}
+
+.third-container { 
+    display: flex;
+    justify-content: center;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+}
+
+.latest-grade {
+    display: flex;
+    justify-content: center;
+}
+
+.grade-container {
+    gap: 0.2rem;
+    border: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: clamp(15%, 30%, 20%);
+    height: 70%;
+    margin: auto;
+}
+
+.new-grades-div {
+    background-color: rgb(116, 190, 250);
+    width: 30%;
+    height: 3%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.new-grades-div:hover {
+    background-color: rgb(48, 144, 223);
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .logo {
+        display: none;
+    }
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .nav-link {
+        justify-content: center;
+    }
+    
+    main {
+        margin: 0;
+    }
+
+    .title-grade {
+        display: flex;
+        justify-content: center;
+        font-size:medium;
+    }
+}

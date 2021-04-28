@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src = 'client.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+   <nav class = "navbar">
+   <ul class = "navbar-nav">
+       <li class = "logo">
+           <a href="/home" class = "nav-link">
+               <span class = "link-text">GradeMe</span>
+               <img src="../uploads/icon.svg" alt="">
+           </a>
+       </li>
+       <li class = "nav-item">
+           <a href="/home" class = "nav-link">
+            <img src="../uploads/house.svg" alt="">
+                <span class = "link-text">Home</span>
+            </a>
+            <a href="/calculator" class = "nav-link">
+                <img src="../uploads/calc1.svg" alt="" id = 'calculator'>
+                <span class = "link-text">Calculator</span>
+            </a>
+       </li>
+   </ul>
+</nav>
+   <main>
+    <div class = "refresh-button-div">
+        <button class = "refresh-button" id = "reload-button">New</button>
+       </div>
+       <h1 class = "title-grade">GradeMe Calculator</h1>
+       <section class = "basic-grid">
+           <div class = "first-container">
+               <input placeholder="e.g. 12" type="text" class = "input-field" id = "input-field">
+            </div>
+           <div class = "second-container">
+            LK
+            <input type="checkbox" class="LK-tickbox" name="LK" id = "checkbox">
+            </div>
+           <div class = "third-container">
+               <button class = "submit-button" id = "submit-button">Submit</button>
+            </div>
+
+            <div class = "text-container">
+                <p id = "text-box">Point Avergade: </p>            
+            </div>
+
+            <div class = "latest-grade">
+                <p id = "latest-grade-box">Input Points: </p>
+            </div>
+       </section>
+       <section class = "grade-container" id = "grade-container">
+
+       </section>
+      
+   </main>
+   
+</body>
+</html>
+
+
