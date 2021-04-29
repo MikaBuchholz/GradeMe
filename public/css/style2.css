@@ -109,6 +109,7 @@
     justify-content: center;
     position: relative;
     cursor: pointer;
+    border-radius: 7%;
 }
 
 .new-grades-div:hover {
@@ -125,6 +126,7 @@
         width: 100vw;
         height: 5rem;
     }
+
     .logo {
         display: none;
     }
