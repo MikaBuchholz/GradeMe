@@ -28,25 +28,23 @@ button.onclick = function(){
         if (checkbox.checked) {
             gradeList.push(inputGrade)
             gradeList.push(inputGrade)
+            isLK = true
         } else {
             gradeList.push(inputGrade)
+            isLK = false
         }
 
-        console.log(gradeList)
 
+        console.log(gradeList, 'A')
         inputPointsTextBox.innerText = `Input Points: ${saveInput} ${lk}`
         
-
-
         var summedUpGrades= gradeList.reduce((a, b) => a + b, 0)
         var testAverage = summedUpGrades / gradeList.length
         var testAverage = testAverage.toFixed(2)
       
-        if (gradeList.length == 2) {
+        if (gradeList.length == 2 && isLK) {
             testAverage = saveInput
         }
-
-       
 
         pointAverageTextBox.innerText = `Point Avergade: ${testAverage}`
         
@@ -103,10 +101,15 @@ function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv
                     
                     averagePoints = averagePoints.toFixed(2)
                     pointAverageTextBox.innerText = `Point Avergade: ${averagePoints}`
-                    var lkGrade = parseInt(gradeList[gradeList.length - 1]);
+
+
                     
+                    var lkGrade = gradeList[gradeList.length - 1];
+                   
+                    
+
                     if (lkGrade === undefined || !isNaN(lkGrade)) {
-                        lkGrade = 'Empty'
+                        //lkGrade = 'Empty'
                     }
 
                     inputPointsTextBox.innerText = `Input Points: ${lkGrade}`
