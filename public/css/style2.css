@@ -67,7 +67,7 @@
 .home-button-div {
     display: flex;
     justify-content: center;
-    margin-left: 97%;
+    margin-left: 94%;
     width: 1%;
     display: none;
 }
@@ -75,7 +75,7 @@
 .refresh-button-div {
     display: flex;
     justify-content: center;
-    margin-left: 97%;
+    margin-left: 94%;
     width: 1%;
     display: none;
 }
