@@ -25,17 +25,17 @@ button.onclick = function(){
 
     if (inputGrade >= 1 && inputGrade <= 15) {
         if (checkbox.checked) {
-            gradeAmount += 1
             gradeList.push(inputGrade)
             gradeList.push(inputGrade)
             isLK = true
         } else {
             gradeList.push(inputGrade)
             isLK = false
-            gradeAmount += 1
+            
         }
 
-
+        gradeAmount += 1
+        console.log(gradeAmount)
         console.log(gradeList, 'A')
         inputPointsTextBox.innerText = `Total: ${gradeAmount}`
         
@@ -63,6 +63,7 @@ button.onclick = function(){
                 lkStatus = false
             }
             //var removedElement = newDiv.getElementsByTagName('p')[0].innerHTML
+            gradeAmount = gradeAmount - 1
             calculateGrades(summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox, lkStatus, gradeAmount)
             newDiv.remove()
         }
@@ -85,6 +86,8 @@ button.onclick = function(){
 }
 
 function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox, lkStatus, gradeAmount) {
+            
+            console.log(gradeAmount)
             for (i = 0; i < gradeList.length; i++) {
                 if (gradeList[i] == saveInput)  {
                     if (lkStatus) {
@@ -92,8 +95,6 @@ function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv
                     }else {
                         gradeList.splice(i, 1)
                     }
-                    gradeAmount -= 1
-                    console.log(gradeList)
                     
                     var summedUpGrades= gradeList.reduce((a, b) => a + b, 0)
                     var averagePoints = summedUpGrades / gradeList.length
@@ -105,12 +106,8 @@ function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv
                     averagePoints = averagePoints.toFixed(2)
                     pointAverageTextBox.innerText = `Point Average: ${averagePoints}`
 
-
-                    
                     var lkGrade = gradeList[gradeList.length - 1];
                    
-                    
-
                     if (lkGrade === undefined || !isNaN(lkGrade)) {
                         //lkGrade = 'Empty'
                     }
@@ -124,6 +121,7 @@ function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv
         if(gradeList.length === 0) {
             inputPointsTextBox.innerText = `Total: Empty`
             pointAverageTextBox.innerText = `Point Avergade: Empty`
+            gradeAmount = 0
         }
 }
 
