@@ -32,6 +32,8 @@ button.onclick = function(){
             gradeList.push(inputGrade)
         }
 
+        console.log(gradeList)
+
         inputPointsTextBox.innerText = `Input Points: ${saveInput} ${lk}`
         
 
@@ -56,8 +58,13 @@ button.onclick = function(){
  
         newDiv.setAttribute('class', 'new-grades-div')
         newDiv.onclick = function () {
+            if (newDiv.style.backgroundColor == 'coral') {
+                lkStatus = true
+            } else {
+                lkStatus = false
+            }
             //var removedElement = newDiv.getElementsByTagName('p')[0].innerHTML
-            calculateGrades(summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox, checkbox)
+            calculateGrades(summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox, lkStatus)
             newDiv.remove()
         }
 
@@ -76,15 +83,16 @@ button.onclick = function(){
     checkbox.checked = false
 }
 
-function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox, checkbox) {
+function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox, lkStatus) {
             for (i = 0; i < gradeList.length; i++) {
                 if (gradeList[i] == saveInput)  {
-                    if (checkbox.checked) {
+                    if (lkStatus) {
                         gradeList.splice(i, 2)
                     }else {
                         gradeList.splice(i, 1)
                     }
                    
+                    console.log(gradeList)
                     
                     var summedUpGrades= gradeList.reduce((a, b) => a + b, 0)
                     var averagePoints = summedUpGrades / gradeList.length
