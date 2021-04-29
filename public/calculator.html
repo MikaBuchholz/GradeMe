@@ -35,8 +35,17 @@
 </nav>
    <main>
     <div class = "refresh-button-div">
-        <button class = "refresh-button" id = "reload-button">New</button>
-       </div>
+        <a onclick = "window.location.reload()" class = "refresh-button">
+            <img src="https://img.icons8.com/ios/50/000000/cloud-refresh.png"/>
+        </a>
+    </div>
+
+    <div class = "home-button-div">
+        <a href="/home">
+            <img src="https://img.icons8.com/cotton/64/000000/cottage.png"/>
+        </a>    
+    </div>
+
        <h1 class = "title-grade">GradeMe Calculator</h1>
        <section class = "basic-grid">
            <div class = "first-container">
@@ -55,7 +64,7 @@
             </div>
 
             <div class = "latest-grade">
-                <p id = "latest-grade-box">Input Points: </p>
+                <p id = "latest-grade-box">Total: </p>
             </div>
        </section>
        <section class = "grade-container" id = "grade-container">
