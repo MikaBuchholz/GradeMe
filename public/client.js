@@ -127,7 +127,3 @@ function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv
         }
 }
 
-
-reloadButton.onclick = function () {
-    location.reload();
-}
