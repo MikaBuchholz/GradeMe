@@ -40,7 +40,7 @@
     background-color:lightcoral;
     color:black;
     border-radius: 7%;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 
@@ -50,6 +50,10 @@
 
 
 .refresh-button {
+    cursor: pointer;
+}
+
+.home-button {
     border-style: solid;
     border: none;
     outline: none;
@@ -60,16 +64,20 @@
     border-radius: 10%;
 }
 
-.refresh-button:hover {
-    background-color:coral;
+.home-button-div {
+    display: flex;
+    justify-content: center;
+    margin-left: 97%;
+    width: 1%;
+    display: none;
 }
-
 
 .refresh-button-div {
     display: flex;
     justify-content: center;
     margin-left: 97%;
-    width: 3%;
+    width: 1%;
+    display: none;
 }
 
 
@@ -139,14 +147,13 @@
 
 @media only screen and (max-width: 600px) {
     .navbar {
-        bottom: 0;
-        width: 100vw;
-        height: 5rem;
+        display: none;
     }
 
     .logo {
         display: none;
     }
+
     .navbar-nav {
         flex-direction: row;
     }
@@ -162,5 +169,15 @@
         display: flex;
         justify-content: center;
         font-size:medium;
+    }
+
+    .grade-container {
+        width: 100%;
+    }
+    .refresh-button-div {
+        display: flex;
+    }
+    .home-button-div {
+        display: flex;
     }
 }
