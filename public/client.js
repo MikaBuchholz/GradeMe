@@ -12,12 +12,6 @@ var test = 0
 var lkCounter = 0
 
 
-//TODO Spelling, Calculation
-
-window.onresize = function () {
-    console.log("BRAh")
-}
-
 button.onclick = function(){
     var inputGrade = parseInt(document.getElementById('input-field').value)
     var saveInput = inputGrade
@@ -35,8 +29,6 @@ button.onclick = function(){
         }
 
         gradeAmount += 1
-        console.log(gradeAmount)
-        console.log(gradeList, 'A')
         inputPointsTextBox.innerText = `Total: ${gradeAmount}`
         
         var summedUpGrades= gradeList.reduce((a, b) => a + b, 0)
@@ -86,8 +78,6 @@ button.onclick = function(){
 }
 
 function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox, lkStatus, gradeAmount) {
-            
-            console.log(gradeAmount)
             for (i = 0; i < gradeList.length; i++) {
                 if (gradeList[i] == saveInput)  {
                     if (lkStatus) {
