@@ -3,12 +3,17 @@
 
 
 .input-field {
+    appearance: none;
     width: 100%;
     outline: none;
     box-shadow: none;
+    border: solid;
     border-width: 0.1rem;
     text-align: center;
     font-family: 'Catamaran', sans-serif;
+    padding: 0.3rem;
+	color: black;
+	font-size: 1rem;
 }
 
 
@@ -32,8 +37,10 @@
     outline: none;
     font-family: 'Catamaran', sans-serif;
     cursor: pointer;
-    background-color:black;
-    color:azure;
+    background-color:lightcoral;
+    color:black;
+    border-radius: 7%;
+    font-size: 1em;
 }
 
 
@@ -48,8 +55,9 @@
     outline: none;
     font-family: 'Catamaran', sans-serif;
     cursor: pointer;
-    background-color:black;
-    color:azure;   
+    background-color:lightcoral;
+    color:black;
+    border-radius: 10%;
 }
 
 .refresh-button:hover {
@@ -96,15 +104,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: clamp(15%, 30%, 20%);
+    width: clamp(15%, 25%, 20%);
     height: 70%;
     margin: auto;
 }
 
+
+.new-grade-p {
+   font-size: 1.1rem;
+}
+
 .new-grades-div {
     background-color: rgb(116, 190, 250);
-    width: 30%;
-    height: 3%;
+    width: clamp(20%, 30%, 20%);
+    height: clamp(3%, 7%, 5%);
     display: flex;
     justify-content: center;
     position: relative;
@@ -118,7 +131,11 @@
 
 
 
-
+.title-grade {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.2rem;
+}
 
 @media only screen and (max-width: 600px) {
     .navbar {
