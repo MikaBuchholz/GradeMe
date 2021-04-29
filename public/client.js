@@ -57,7 +57,7 @@ button.onclick = function(){
         newDiv.setAttribute('class', 'new-grades-div')
         newDiv.onclick = function () {
             //var removedElement = newDiv.getElementsByTagName('p')[0].innerHTML
-            calculateGrades(summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox)
+            calculateGrades(summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox, checkbox)
             newDiv.remove()
         }
 
@@ -76,17 +76,19 @@ button.onclick = function(){
     checkbox.checked = false
 }
 
-function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox) {
-        if (newDiv.style.backgroundColor == 'coral') {
+function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv, saveInput, inputPointsTextBox, checkbox) {
             for (i = 0; i < gradeList.length; i++) {
                 if (gradeList[i] == saveInput)  {
-                    gradeList.splice(i, 2)
+                    if (checkbox.checked) {
+                        gradeList.splice(i, 2)
+                    }else {
+                        gradeList.splice(i, 1)
+                    }
+                   
                     
-
                     var summedUpGrades= gradeList.reduce((a, b) => a + b, 0)
                     var averagePoints = summedUpGrades / gradeList.length
                    
-                    
                     if (averagePoints > 15) {
                         averagePoints = 15
                     }
@@ -102,38 +104,8 @@ function calculateGrades (summedUpGrades, gradeList, pointAverageTextBox, newDiv
                     inputPointsTextBox.innerText = `Input Points: ${lkGrade}`
                  
                     break
-                    
                 }
             }
-        }else{
-            for (i = 0; i < gradeList.length; i++) {
-                if (gradeList[i] == saveInput) {
-                    gradeList.splice(i, 2)
-                    
-
-                    var summedUpGrades= gradeList.reduce((a, b) => a + b, 0)
-                    var averagePoints = summedUpGrades / (gradeList.length + lkCounter)
-
-                    if (averagePoints > 15) {
-                        averagePoints = 15
-                    }
-                
-                    averagePoints = averagePoints.toFixed(2)
-
-                    pointAverageTextBox.innerText = `Point Avergade: ${averagePoints}`
-                    
-                    var lkGrade = parseInt(gradeList[gradeList.length - 1]);
-
-                    if (lkGrade === undefined || isNaN(lkGrade)) {
-                        lkGrade = 'Empty'
-                    }
-
-                    inputPointsTextBox.innerText = `Input Points: ${lkGrade}`
-                  
-                    break
-                }
-            } 
-        }
         
         if(gradeList.length === 0) {
             inputPointsTextBox.innerText = `Input Points: Empty`
