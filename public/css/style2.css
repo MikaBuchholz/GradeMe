@@ -77,7 +77,6 @@
     justify-content: center;
     margin-left: 94%;
     width: 1%;
-    display: none;
 }
 
 
@@ -174,9 +173,7 @@
     .grade-container {
         width: 100%;
     }
-    .refresh-button-div {
-        display: flex;
-    }
+    
     .home-button-div {
         display: flex;
     }
