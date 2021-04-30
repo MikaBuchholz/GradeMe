@@ -48,6 +48,7 @@ button.onclick = function(){
 
         var testAverage = summedUpPoints / pointList.length
         var testAverage = testAverage.toFixed(2)
+        gradeAverage = gradeAverage.toFixed(2)
       
         if (pointList.length == 2 && isLK) {
             testAverage = saveInput
