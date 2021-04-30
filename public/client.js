@@ -39,7 +39,7 @@ button.onclick = function(){
             testAverage = saveInput
         }
 
-        pointAverageTextBox.innerText = `Point Avergade: ${testAverage}`
+        pointAverageTextBox.innerText = `Point Average: ${testAverage}`
         
         const newDiv = document.createElement("div")
 
